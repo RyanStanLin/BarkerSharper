@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>BarkerSharper</Title>
+        <Authors>RyanStanLin</Authors>
+        <Description>Implementation of Bark API based on .NET, supporting encryption, batch sending, and other new features of Bark.</Description>
+        <Copyright>© 2024-2025 RyanStanLin. All Rights Reserved.</Copyright>
+        <PackageIcon>BarkerSharperPureLogo.jpg</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="RestSharp" Version="112.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="BarkerSharperPureLogo.jpg">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+</Project>
