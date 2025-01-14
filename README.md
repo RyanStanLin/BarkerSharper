@@ -7,8 +7,6 @@
 
 - 适配最新的 [Bark] 服务端。
 - 实现了 [Bark] 的 `AES128,192,256加密` 和 `批量发送`
-  - `Http Adapter` 用来进行发送操作。
-  - `Websocket Adapter` 用来进行接收操作。
 - [bark-server](https://github.com/Finb/bark-server) 作为推送系统。
 - 支持Async调用。
 - 提供了简单的调用方式
