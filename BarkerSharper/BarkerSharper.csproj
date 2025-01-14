@@ -10,6 +10,11 @@
         <Description>Implementation of Bark API based on .NET, supporting encryption, batch sending, and other new features of Bark.</Description>
         <Copyright>© 2024-2025 RyanStanLin. All Rights Reserved.</Copyright>
         <PackageIcon>BarkerSharperPureLogo.jpg</PackageIcon>
+        <PackageProjectUrl>https://github.com/RyanStanLin/BarkerSharper</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/RyanStanLin/BarkerSharper</RepositoryUrl>
+        <PackageTags>Bark, Notification, .net</PackageTags>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
