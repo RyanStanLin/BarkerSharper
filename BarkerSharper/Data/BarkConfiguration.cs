@@ -13,8 +13,8 @@ public class BarkConfiguration
     /// <summary>
     /// 用于设备身份验证的密钥
     /// </summary>
-    public List<string> DeviceKeys { get; init; }
-    public string DeviceKey { get; init; }
+    public List<string>? DeviceKeys { get; init; } = [];
+    public string? DeviceKey { get; init; } = string.Empty;
     
     internal readonly bool IsBatch;
     internal readonly bool IsEncryptMessage;
@@ -65,7 +65,7 @@ public class BarkConfiguration
 
     private static List<string> ValidateDeviceKeys(List<string> deviceKeys)
     {
-        if (deviceKeys is null || deviceKeys.Any() is not true)
+        if (deviceKeys is null || deviceKeys.Count is 0)
             throw new ArgumentNullException(nameof(deviceKeys), "DeviceKeys 不能为空。");
 
         foreach (var key in deviceKeys)
@@ -77,7 +77,7 @@ public class BarkConfiguration
     
     private static string ValidateDeviceKey(string deviceKey)
     {
-        if (deviceKey is null || deviceKey.Any() is not true)
+        if (deviceKey is null || deviceKey.Length is 0)
             throw new ArgumentNullException(nameof(deviceKey), "DeviceKey 不能为空。");
         
         if (string.IsNullOrWhiteSpace(deviceKey))

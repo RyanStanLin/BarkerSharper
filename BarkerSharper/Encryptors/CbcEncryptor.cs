@@ -50,7 +50,7 @@ internal class CbcEncryptor : IEncryptor
                 Mode = CipherMode.CBC,
                 Padding = PaddingMode.PKCS7,
                 Key = _strategy.Key,
-                IV = _strategy.IV
+                IV = _strategy.IV ?? throw new InvalidOperationException()
             };
         }
 

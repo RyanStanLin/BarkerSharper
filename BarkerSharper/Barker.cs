@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Text;
+﻿using System.Text;
 using BarkerSharper.Data;
 using BarkerSharper.Model;
 using BarkerSharper.Extensions;
@@ -13,16 +12,9 @@ namespace BarkerSharper;
 /// </summary>
 /// <param name="barkConfiguration">Bark服务的配置信息。</param>
 /// <exception cref="ArgumentNullException">当 barkConfiguration 为 null 时抛出。</exception>
-public class Barker
+public class Barker(BarkConfiguration barkConfiguration)
 {
-    private readonly BarkConfiguration _barkConfiguration;
-
-    public Barker(BarkConfiguration barkConfiguration)
-    {
-        if (barkConfiguration is null)
-            throw new ArgumentNullException(nameof(_barkConfiguration));
-        _barkConfiguration = barkConfiguration;
-    }
+    private readonly BarkConfiguration _barkConfiguration = barkConfiguration ?? throw new ArgumentNullException(nameof(barkConfiguration));
 
     /// <summary>
     /// 同步发送通知。

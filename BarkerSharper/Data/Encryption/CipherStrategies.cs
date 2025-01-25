@@ -29,7 +29,7 @@ public record GcmStrategy : CipherStrategy
     {
         if (IV == null || IV.Length != AesGcm.NonceByteSizes.MaxSize)
         {
-            throw new InvalidIVException("Invalid IV size. Expected 12 bytes (96 bits) for AES-GCM.");
+            throw new InvalidIvException("Invalid IV size. Expected 12 bytes (96 bits) for AES-GCM.");
         }
     }
 }

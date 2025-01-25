@@ -87,7 +87,7 @@ namespace BarkerSharper.Model
             if (Volume is not null and < 0 or >10) throw new ArgumentOutOfRangeException(nameof(Volume), $"Volume({Volume}) can not be less than 0 or greater than 10.");
         }
 
-        public static new T FromJson<T>(string json) where T : BarkNotificationBaseModel
+        public static T FromJson<T>(string json) where T : BarkNotificationBaseModel
         {
             return JsonConvert.DeserializeObject<T>(json, BarkNotificationPostModelConverter.Settings);
         }

@@ -10,7 +10,7 @@ public static class StringExtensions
     /// <param name="input">待转换的字符串</param>
     /// <param name="encoding">指定编码（默认UTF-8）</param>
     /// <returns>转换后的16进制字符串</returns>
-    public static string ToHex(this string input, Encoding encoding = null)
+    public static string ToHex(this string input, Encoding? encoding = null)
     {
         if (input == null) throw new ArgumentNullException(nameof(input));
         encoding ??= Encoding.UTF8;
@@ -30,7 +30,7 @@ public static class StringExtensions
     /// <param name="hex">16进制字符串</param>
     /// <param name="encoding">指定编码（默认UTF-8）</param>
     /// <returns>还原后的字符串</returns>
-    public static string FromHex(this string hex, Encoding encoding = null)
+    public static string FromHex(this string hex, Encoding? encoding = null)
     {
         if (string.IsNullOrEmpty(hex)) throw new ArgumentException("Hex string cannot be null or empty", nameof(hex));
         if (hex.Length % 2 != 0) throw new FormatException("Hex string must have an even length.");

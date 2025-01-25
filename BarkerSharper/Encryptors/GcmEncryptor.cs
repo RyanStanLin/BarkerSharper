@@ -66,7 +66,7 @@ internal class GcmEncryptor : IAeadEncryptor
             if (_strategy.Key == null || (_strategy.Key.Length * 8) != 128 && (_strategy.Key.Length * 8) != 192 && (_strategy.Key.Length * 8) != 256)
                 throw new InvalidKeyException("Invalid key size. Expected 128, 192, or 256 bits.");
             if (_strategy.IV == null || _strategy.IV.Length != AesGcm.NonceByteSizes.MaxSize)
-                throw new InvalidIVException("Invalid IV size. Expected 12 bytes (96 bits) for AES-GCM.");
+                throw new InvalidIvException("Invalid IV size. Expected 12 bytes (96 bits) for AES-GCM.");
         }
         
         public byte[] Encrypt(ReadOnlySpan<byte> data)
